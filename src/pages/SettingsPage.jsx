@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button, Card } from '../components/ui';
 import { getSettings, saveSettings, clearAllData, getStats, getWrongAnswers } from '../utils/storage';
 
 function SettingsPage() {
+    const navigate = useNavigate();
     const [settings, setSettings] = useState(getSettings());
     const [showConfirm, setShowConfirm] = useState(false);
     const stats = getStats();
@@ -25,7 +27,8 @@ function SettingsPage() {
         setSettings({ darkMode: false });
         document.documentElement.classList.remove('dark');
         setShowConfirm(false);
-        window.location.reload();
+        // 홈으로 리다이렉트 (새로고침 대신)
+        navigate('/');
     };
 
     return (

@@ -24,8 +24,8 @@ function HomePage() {
                     </span>
                 </h1>
                 <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-                    특수교육 현장에서 필수적인<br />
-                    <strong>지문자와 지숫자</strong>를 쉽고 재미있게 학습하세요!
+                    특수교육 임용고시 준비생을 위한<br />
+                    <strong>지문자 학습 앱</strong>
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Link to="/study">
@@ -59,40 +59,6 @@ function HomePage() {
                         </div>
                     </div>
                 </Card>
-            </section>
-
-            {/* Features */}
-            <section>
-                <h2 className="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-100">학습 기능</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <Card>
-                        <div className="text-center">
-                            <span className="text-4xl mb-3 block">📖</span>
-                            <h3 className="font-bold text-lg mb-2">플래시카드</h3>
-                            <p className="text-sm text-gray-500 dark:text-gray-400">
-                                한글 자음/모음, 숫자, 영어 알파벳을 플래시카드로 학습
-                            </p>
-                        </div>
-                    </Card>
-                    <Card>
-                        <div className="text-center">
-                            <span className="text-4xl mb-3 block">🎯</span>
-                            <h3 className="font-bold text-lg mb-2">객관식 퀴즈</h3>
-                            <p className="text-sm text-gray-500 dark:text-gray-400">
-                                4지선다 문제로 지문자 실력 점검
-                            </p>
-                        </div>
-                    </Card>
-                    <Card>
-                        <div className="text-center">
-                            <span className="text-4xl mb-3 block">🏆</span>
-                            <h3 className="font-bold text-lg mb-2">단어 조합</h3>
-                            <p className="text-sm text-gray-500 dark:text-gray-400">
-                                특수교육 전공 용어를 지문자로 표현
-                            </p>
-                        </div>
-                    </Card>
-                </div>
             </section>
 
             {/* Stats */}
