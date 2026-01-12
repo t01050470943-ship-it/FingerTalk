@@ -140,8 +140,8 @@ function AdvancedQuizPage() {
                                 key={count}
                                 onClick={() => setQuestionCount(count)}
                                 className={`py-3 rounded-lg font-bold transition-all ${questionCount === count
-                                        ? 'bg-primary-500 text-white'
-                                        : 'bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600'
+                                    ? 'bg-primary-500 text-white'
+                                    : 'bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600'
                                     }`}
                             >
                                 {count}문제
@@ -182,7 +182,7 @@ function AdvancedQuizPage() {
                 {/* Question - Jamo Images */}
                 <Card className="mb-6" hover={false}>
                     <p className="text-center text-gray-500 mb-2">이 지문자는 어떤 단어일까요?</p>
-                    <p className="text-center text-xs text-gray-400 mb-4">← 바라보는 방향</p>
+                    <p className="text-center text-xs text-gray-400 mb-4">바라보는 방향 →</p>
 
                     <div className="flex gap-1 overflow-x-auto py-4 min-h-[140px] items-center justify-center">
                         {currentQuestion.jamoImages.map((item, index) => (
@@ -219,10 +219,10 @@ function AdvancedQuizPage() {
                             disabled={showFeedback}
                             placeholder="정답을 입력하세요"
                             className={`w-full px-4 py-3 text-xl text-center rounded-xl border-2 focus:outline-none transition-all ${showFeedback
-                                    ? isCorrect
-                                        ? 'border-green-500 bg-green-50 dark:bg-green-900/30'
-                                        : 'border-red-500 bg-red-50 dark:bg-red-900/30'
-                                    : 'border-gray-200 dark:border-gray-600 focus:border-primary-500 bg-white dark:bg-gray-800'
+                                ? isCorrect
+                                    ? 'border-green-500 bg-green-50 dark:bg-green-900/30'
+                                    : 'border-red-500 bg-red-50 dark:bg-red-900/30'
+                                : 'border-gray-200 dark:border-gray-600 focus:border-primary-500 bg-white dark:bg-gray-800'
                                 }`}
                         />
                         {showFeedback && (
