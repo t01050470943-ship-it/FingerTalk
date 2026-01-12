@@ -1,0 +1,116 @@
+{
+    "words": [
+        {
+            "word": "통합교육",
+            "category": "교육"
+        },
+        {
+            "word": "개별화",
+            "category": "교육"
+        },
+        {
+            "word": "청각장애",
+            "category": "장애유형"
+        },
+        {
+            "word": "시각장애",
+            "category": "장애유형"
+        },
+        {
+            "word": "지체장애",
+            "category": "장애유형"
+        },
+        {
+            "word": "자폐성",
+            "category": "장애유형"
+        },
+        {
+            "word": "발달지체",
+            "category": "장애유형"
+        },
+        {
+            "word": "정서행동",
+            "category": "장애유형"
+        },
+        {
+            "word": "학습장애",
+            "category": "장애유형"
+        },
+        {
+            "word": "의사소통",
+            "category": "장애유형"
+        },
+        {
+            "word": "보조공학",
+            "category": "서비스"
+        },
+        {
+            "word": "치료지원",
+            "category": "서비스"
+        },
+        {
+            "word": "전환교육",
+            "category": "서비스"
+        },
+        {
+            "word": "진단평가",
+            "category": "평가"
+        },
+        {
+            "word": "적격성",
+            "category": "평가"
+        },
+        {
+            "word": "특수학급",
+            "category": "배치"
+        },
+        {
+            "word": "특수학교",
+            "category": "배치"
+        },
+        {
+            "word": "순회교육",
+            "category": "배치"
+        },
+        {
+            "word": "통합학급",
+            "category": "배치"
+        },
+        {
+            "word": "일반학급",
+            "category": "배치"
+        },
+        {
+            "word": "보편설계",
+            "category": "교수"
+        },
+        {
+            "word": "교수적합",
+            "category": "교수"
+        },
+        {
+            "word": "긍정행동",
+            "category": "행동"
+        },
+        {
+            "word": "기능평가",
+            "category": "행동"
+        },
+        {
+            "word": "자기결정",
+            "category": "전환"
+        },
+        {
+            "word": "직업재활",
+            "category": "전환"
+        },
+        {
+            "word": "부모교육",
+            "category": "가족"
+        },
+        {
+            "word": "가족지원",
+            "category": "가족"
+        }
+    ]
+}
