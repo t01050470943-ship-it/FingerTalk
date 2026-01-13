@@ -3,6 +3,7 @@ const STORAGE_KEYS = {
     QUIZ_RESULTS: 'fingertalk_quiz_results',
     SETTINGS: 'fingertalk_settings',
     WRONG_ANSWERS: 'fingertalk_wrong_answers',
+    COPYRIGHT_CONSENT: 'fingertalk_copyright_consent',
 };
 
 /**
@@ -95,6 +96,22 @@ export function saveSettings(settings) {
 export function getSettings() {
     const data = localStorage.getItem(STORAGE_KEYS.SETTINGS);
     return data ? JSON.parse(data) : { darkMode: false };
+}
+
+/**
+ * 저작권 동의 확인
+ * @returns {boolean} 동의 여부
+ */
+export function hasConsent() {
+    const consent = localStorage.getItem(STORAGE_KEYS.COPYRIGHT_CONSENT);
+    return consent === 'true';
+}
+
+/**
+ * 저작권 동의 저장
+ */
+export function saveConsent() {
+    localStorage.setItem(STORAGE_KEYS.COPYRIGHT_CONSENT, 'true');
 }
 
 /**
