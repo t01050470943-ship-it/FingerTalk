@@ -44,7 +44,7 @@ function HomePage() {
 
                 <div className="space-y-4 text-left mb-6 text-gray-700 dark:text-gray-300">
                     <p className="font-semibold text-primary-600 dark:text-primary-400">
-                        이 앱은 특수교육 임용공부를 하는 최한솔 선생님께서 수험생들을 위해 만든 앱입니다.
+                        이 앱은 최한솔 선생님께서 특수교육 임용공부를 하는 수험생들을 위해 만든 앱입니다.
                     </p>
 
                     <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 space-y-2 text-sm">
