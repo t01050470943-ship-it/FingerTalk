@@ -184,7 +184,8 @@ function AdvancedQuizPage() {
                     <p className="text-center text-gray-500 mb-2">이 지문자는 어떤 단어일까요?</p>
                     <p className="text-center text-xs text-gray-400 mb-4">진행 방향 →</p>
 
-                    <div className="flex gap-1 overflow-x-auto py-4 min-h-[140px] items-center justify-center">
+
+                    <div className="flex gap-1 overflow-x-auto py-4 min-h-[140px] items-center" style={{ WebkitOverflowScrolling: 'touch' }}>
                         {currentQuestion.jamoImages.map((item, index) => (
                             <div
                                 key={index}
