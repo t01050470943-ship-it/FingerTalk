@@ -54,18 +54,18 @@ export const Scene3Gyeonggi: React.FC = () => {
         </div>
       </div>
 
-      <div style={{ marginTop: 8, transform: `scale(${mapScale})` }}>
-        <KoreaMap frame={frame} litRegions={allLit} highlight="gyeonggi" />
-      </div>
-
-      {/* 현직 → 새 교육감 (보조자막) */}
+      {/* 현직 → 새 교육감 (보조자막) — 지도 위에 배치해 제주도와 겹침 방지 */}
       <div
         style={{
-          marginTop: 12,
+          marginTop: 28,
           opacity: subOpacity,
           display: "flex",
           alignItems: "center",
           gap: 28,
+          padding: "20px 48px",
+          borderRadius: 999,
+          background: "rgba(255,255,255,0.06)",
+          border: "2px solid rgba(255,184,0,0.45)",
           fontSize: 62,
           fontWeight: 800,
         }}
@@ -73,6 +73,10 @@ export const Scene3Gyeonggi: React.FC = () => {
         <span style={{ color: COLORS.gray }}>임태희</span>
         <ArrowRight progress={arrowProgress} />
         <span style={{ color: COLORS.text }}>안민석</span>
+      </div>
+
+      <div style={{ marginTop: 36, transform: `scale(${mapScale})` }}>
+        <KoreaMap frame={frame} litRegions={allLit} highlight="gyeonggi" width={420} />
       </div>
     </Stage>
   );
