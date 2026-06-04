@@ -22,17 +22,17 @@ export const Scene4Regions: React.FC = () => {
   return (
     <Stage>
       <div style={{ opacity: titleOpacity }}>
-        <Pill color={COLORS.gold} style={{ color: COLORS.gold }}>
+        <Pill color={COLORS.gold} style={{ color: COLORS.gold, fontSize: 58, padding: "20px 52px" }}>
           새 교육감 취임
         </Pill>
       </div>
 
       <div
         style={{
-          marginTop: 64,
+          marginTop: 56,
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
-          gap: 36,
+          gap: 40,
           width: "100%",
         }}
       >
@@ -55,11 +55,11 @@ export const Scene4Regions: React.FC = () => {
               style={{
                 opacity,
                 transform: `scale(${scale})`,
-                padding: "40px 0",
+                padding: "48px 0",
                 borderRadius: 28,
                 background: "rgba(45,212,191,0.10)",
                 border: `3px solid ${COLORS.mint}`,
-                fontSize: 96,
+                fontSize: 104,
                 fontWeight: 900,
                 color: COLORS.text,
               }}

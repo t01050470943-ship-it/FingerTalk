@@ -43,12 +43,21 @@ export const SceneFade: React.FC<{
   fadeOut?: number;
 }> = ({ children, durationInFrames, fadeIn = 8, fadeOut = 8 }) => {
   const frame = useCurrentFrame();
-  const opacity = interpolate(
-    frame,
-    [0, fadeIn, durationInFrames - fadeOut, durationInFrames],
-    [0, 1, 1, 0],
-    { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
-  );
+  const fadeInOpacity = interpolate(frame, [0, fadeIn], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+  // fadeOut=0 이면 끝까지 고정(페이드아웃 없음)
+  const fadeOutOpacity =
+    fadeOut <= 0
+      ? 1
+      : interpolate(
+          frame,
+          [durationInFrames - fadeOut, durationInFrames],
+          [1, 0],
+          { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+        );
+  const opacity = Math.min(fadeInOpacity, fadeOutOpacity);
   return <AbsoluteFill style={{ opacity }}>{children}</AbsoluteFill>;
 };
 

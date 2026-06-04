@@ -50,7 +50,7 @@ export const Scene3Gyeonggi: React.FC = () => {
             textShadow: "0 0 50px rgba(255,184,0,0.5)",
           }}
         >
-          경기 ⭐
+          경기 <span style={{ color: COLORS.gold }}>★</span>
         </div>
       </div>
 

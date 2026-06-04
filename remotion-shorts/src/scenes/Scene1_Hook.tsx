@@ -25,34 +25,40 @@ export const Scene1Hook: React.FC = () => {
   });
   const popScale = interpolate(pop, [0, 1], [0.3, 1]);
 
+  // 골드 언더바: 필독! 등장 직후 좌→우로 그려짐
+  const barProgress = interpolate(frame - (popStart + 6), [0, 14], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+
   return (
     <Stage>
       <div style={{ transform: `translateY(${y}px)`, opacity }}>
         <div
           style={{
-            fontSize: 96,
+            fontSize: 92,
             fontWeight: 800,
             color: COLORS.text,
-            lineHeight: 1.25,
+            lineHeight: 1.3,
             letterSpacing: -1,
           }}
         >
           특수교육 임용
           <br />
-          준비생
+          준비생이라면
         </div>
       </div>
 
       <div
         style={{
-          marginTop: 56,
+          marginTop: 64,
           transform: `scale(${popScale})`,
           opacity: pop,
         }}
       >
         <div
           style={{
-            fontSize: 168,
+            fontSize: 184,
             fontWeight: 900,
             color: COLORS.gold,
             letterSpacing: 4,
@@ -61,6 +67,17 @@ export const Scene1Hook: React.FC = () => {
         >
           필독!
         </div>
+        {/* 골드 언더바 */}
+        <div
+          style={{
+            height: 12,
+            width: `${barProgress * 60}%`,
+            margin: "18px auto 0",
+            borderRadius: 999,
+            background: COLORS.gold,
+            boxShadow: "0 0 24px rgba(255,184,0,0.5)",
+          }}
+        />
       </div>
     </Stage>
   );

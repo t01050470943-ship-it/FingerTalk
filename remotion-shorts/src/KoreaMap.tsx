@@ -71,45 +71,48 @@ export const KoreaMap: React.FC<{
 
         const dimmed = highlight && !isHi;
         const baseColor = isHi ? COLORS.gold : COLORS.mint;
-        const dotR = isHi ? 9 : 6;
+        const dotR = isHi ? 11 : 6;
 
         if (!isLit) return null;
 
+        // 강조 지역은 계속 맥동하는 링(pulse ring)으로 시선을 끈다
+        const pulse = (frame % 36) / 36; // 0→1 반복
+        const ringR = dotR + 6 + pulse * 26;
+        const ringOpacity = 0.7 * (1 - pulse);
+
         return (
-          <g key={key} opacity={dimmed ? 0.18 : 1}>
+          <g key={key} opacity={dimmed ? 0.16 : 1}>
             {/* 외곽 글로우 */}
             <circle
               cx={r.x}
               cy={r.y}
-              r={dotR + 12 * glow + (isHi ? 8 : 0)}
+              r={dotR + 12 * glow + (isHi ? 12 : 0)}
               fill={baseColor}
-              opacity={0.22 + 0.28 * glow}
+              opacity={0.22 + 0.3 * glow}
             />
+            {isHi && (
+              <circle
+                cx={r.x}
+                cy={r.y}
+                r={ringR}
+                fill="none"
+                stroke={COLORS.gold}
+                strokeWidth={3}
+                opacity={ringOpacity}
+              />
+            )}
             {/* 점 */}
             <circle cx={r.x} cy={r.y} r={dotR * scale} fill={baseColor} />
             {isHi && (
-              <>
-                <circle
-                  cx={r.x}
-                  cy={r.y}
-                  r={dotR + 7}
-                  fill="none"
-                  stroke={COLORS.gold}
-                  strokeWidth={2.5}
-                  opacity={0.9}
-                />
-                <text
-                  x={r.x}
-                  y={r.y - 20}
-                  textAnchor="middle"
-                  fill={COLORS.gold}
-                  fontSize={22}
-                  fontWeight={900}
-                  fontFamily="Pretendard, sans-serif"
-                >
-                  경기 ★
-                </text>
-              </>
+              <circle
+                cx={r.x}
+                cy={r.y}
+                r={(dotR + 5) * scale}
+                fill="none"
+                stroke={COLORS.gold}
+                strokeWidth={3}
+                opacity={0.95}
+              />
             )}
           </g>
         );

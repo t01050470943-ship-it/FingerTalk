@@ -74,13 +74,21 @@ export const Scene6CTA: React.FC = () => {
         style={{
           marginTop: 72,
           opacity: handleOpacity,
-          fontSize: 44,
-          fontWeight: 700,
-          color: COLORS.gray,
+          display: "flex",
+          alignItems: "center",
+          gap: 16,
+          padding: "16px 36px",
+          borderRadius: 999,
+          background: "rgba(255,255,255,0.08)",
+          border: "2px solid rgba(169,180,208,0.45)",
+          fontSize: 46,
+          fontWeight: 800,
+          color: COLORS.text,
           letterSpacing: 1,
         }}
       >
-        @특수교육임용창고
+        <span style={{ color: COLORS.gold }}>▶</span>
+        특수교육임용창고
       </div>
     </Stage>
   );

@@ -31,7 +31,7 @@ export const Scene5Impact: React.FC = () => {
       >
         교육감이 바뀌면
         <br />
-        <span style={{ color: COLORS.gold }}>이것들이 달라집니다</span>
+        <span style={{ color: COLORS.gold }}>이렇게 달라집니다</span>
       </div>
 
       <div style={{ display: "flex", flexDirection: "column", gap: 40, width: "100%" }}>

@@ -28,18 +28,25 @@ export const Main: React.FC = () => {
       {/* 나레이션: 0프레임부터. 영상의 기준 시계 */}
       <Audio src={staticFile("narration.wav")} />
 
-      {SCENES.map(({ from, durationInFrames, Comp }, i) => (
-        <Sequence
-          key={i}
-          from={from}
-          durationInFrames={durationInFrames}
-          name={`Scene${i + 1}`}
-        >
-          <SceneFade durationInFrames={durationInFrames}>
-            <Comp />
-          </SceneFade>
-        </Sequence>
-      ))}
+      {SCENES.map(({ from, durationInFrames, Comp }, i) => {
+        const isLast = i === SCENES.length - 1;
+        return (
+          <Sequence
+            key={i}
+            from={from}
+            durationInFrames={durationInFrames}
+            name={`Scene${i + 1}`}
+          >
+            {/* 마지막 씬(CTA)은 끝까지 고정 — 페이드아웃 없음 */}
+            <SceneFade
+              durationInFrames={durationInFrames}
+              fadeOut={isLast ? 0 : 8}
+            >
+              <Comp />
+            </SceneFade>
+          </Sequence>
+        );
+      })}
     </AbsoluteFill>
   );
 };

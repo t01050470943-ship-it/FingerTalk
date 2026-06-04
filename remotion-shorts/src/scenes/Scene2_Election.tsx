@@ -41,8 +41,8 @@ export const Scene2Election: React.FC = () => {
         </div>
       </div>
 
-      <div style={{ marginTop: 24 }}>
-        <KoreaMap frame={frame} litRegions={lit} />
+      <div style={{ marginTop: 8 }}>
+        <KoreaMap frame={frame} litRegions={lit} width={560} />
       </div>
     </Stage>
   );
