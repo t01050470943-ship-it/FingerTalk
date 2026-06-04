@@ -80,7 +80,7 @@ export const Scene6CTA: React.FC = () => {
           letterSpacing: 1,
         }}
       >
-        @특수교육_임용_길잡이
+        @특수교육임용창고
       </div>
     </Stage>
   );
